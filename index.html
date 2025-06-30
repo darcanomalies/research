@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.A.R.C. - Department for Anomalous Research and Containment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">D.A.R.C.<span class="logo-sub">_Secure</span></a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Anomalous Objects</a>
+            <a href="#">Incident Reports</a>
+            <a href="#">Research</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>D.A.R.C.</h1>
+                <p>Prevent. Investigate. Contain. Protect Reality. Threats are Everywhere.</p>
+                <a href="#anomalous-objects" class="btn">Access Database</a>
+            </div>
+        </section>
+
+        <section class="content-container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search Objects, Reports, or Classification Data...">
+            </div>
+
+            <section class="content-section" id="anomalous-objects">
+                <h2>Classified Anomalous Objects</h2>
+                <div class="object-grid" id="objectGrid">
+                    </div>
+                <div class="loading-indicator" id="loadingIndicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading Anomalous Data...
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 D.A.R.C. Department for Anomalous Research and Containment.</p>
+        <p>Restricted Access. Protocol Violation May Result in Fatalities.</p>
+        <p>
+            <a href="#">Confidentiality Policy</a> |
+            <a href="#">Security Protocols</a> |
+            <a href="#">Contact Intelligence Unit</a>
+        </p>
+    </footer>
+
+    <div id="objectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBodyContent">
+                Loading object details...
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
