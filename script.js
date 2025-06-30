@@ -3,7 +3,7 @@ const allObjects = [
     {
         id: 'A-001',
         title: 'Object A-001: The Whispering Cube',
-        image: 'https://via.placeholder.com/400x250/330000/DDDDDD?text=A-001+Whispering+Cube',
+        image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jz03tnfxf78agt5jzaezpv6r%2F1751277020_img_0.webp?st=2025-06-30T08%3A29%3A15Z&se=2025-07-06T09%3A29%3A15Z&sks=b&skt=2025-06-30T08%3A29%3A15Z&ske=2025-07-06T09%3A29%3A15Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=9TNieF8xnZ30ao9K%2B8V6RFm7JxEpqqINlhdp%2FM0tWfA%3D&az=oaivgprodscus',
         shortDescription: 'A metallic cube emitting hypnotic whispers in ancient languages, altering reality perception within 5 meters.',
         detailFile: 'A-001.html' // Path to the individual object detail page
     },
