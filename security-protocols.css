@@ -1,0 +1,258 @@
+/* security-protocols.css */
+
+/* Import font Roboto - hanya jika tidak diimport di style.css.
+   Jika style.css sudah mengimportnya secara global untuk semua body, baris ini bisa dihapus.
+   Namun, untuk keamanan, kita masukkan di sini agar font tersedia untuk bagian konten. */
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+   /* Gaya Hero Khusus Halaman Protokol Keamanan */
+   .security-hero {
+       background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x600/000000/DDDDDD?text=D.A.R.C.+Security+Grid'); /* Gambar latar belakang yang lebih teknis/gelap */
+       height: 60vh;
+       border-bottom: 3px solid var(--accent-color);
+       margin-top: 60px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       position: relative;
+       overflow: hidden;
+   }
+   
+   .security-hero::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background:
+           linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 70px 70px, /* Grid putih/abu-abu lebih halus */
+           linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 70px 70px;
+       z-index: 0;
+       opacity: 0.1; /* Lebih samar lagi */
+   }
+   
+   .security-hero .hero-content {
+       z-index: 1;
+       padding: 20px;
+       animation: fadeInScale 1s ease-out forwards;
+   }
+   
+   /* Pastikan font untuk h1 di hero konsisten dengan index.html */
+   .security-hero .hero-content h1 {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sesuaikan dengan font di style.css */
+       font-size: 4.5em; /* Ukuran yang sama dengan index.html hero h1 */
+       margin-bottom: 20px;
+       color: white;
+       text-shadow: 0 0 10px rgba(163, 0, 0, 0.7);
+       letter-spacing: 2px;
+       font-weight: bold;
+   }
+   
+   .security-hero .hero-content p {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sesuaikan dengan font di style.css */
+       font-size: 1.4em; /* Ukuran yang sama dengan index.html hero p */
+       color: var(--light-text-color);
+       text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+       max-width: 700px;
+       margin: 0 auto;
+   }
+   
+   /* Konten Utama Protokol Keamanan */
+   .security-content {
+       padding: 80px 50px;
+       max-width: 1000px;
+       margin: 0 auto;
+       font-family: 'Roboto', sans-serif; /* Font Roboto untuk konten protokol */
+   }
+   
+   .security-content .section-title {
+       text-align: center;
+       border-left: none;
+       padding-left: 0;
+       font-size: 3em;
+       margin-bottom: 40px;
+       color: white;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       position: relative;
+       display: inline-block;
+       font-weight: 700;
+   }
+   
+   .security-content .section-title::after {
+       content: '';
+       display: block;
+       width: 80%;
+       height: 3px;
+       background: var(--accent-color);
+       margin: 15px auto 0;
+       border-radius: 2px;
+   }
+   
+   .security-content .intro-text {
+       color: var(--light-text-color);
+       font-size: 1.1em;
+       line-height: 1.8;
+       margin-bottom: 50px;
+       text-align: center;
+       font-style: italic;
+       font-weight: 400;
+   }
+   
+   .security-section {
+       background-color: var(--main-bg);
+       padding: 30px;
+       border-radius: 8px;
+       border: 1px solid var(--border-color);
+       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+       margin-bottom: 40px;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+   
+   .security-section:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(163, 0, 0, 0.4);
+   }
+   
+   .security-section h3 {
+       color: white;
+       font-size: 1.8em;
+       margin-top: 0;
+       margin-bottom: 20px;
+       border-bottom: 2px solid var(--accent-color);
+       padding-bottom: 10px;
+       font-weight: 700;
+   }
+   
+   .security-section p {
+       color: var(--text-color);
+       line-height: 1.7;
+       margin-bottom: 1em;
+       font-weight: 400;
+   }
+   
+   .security-section ul {
+       list-style: none;
+       padding: 0;
+       margin-top: 20px;
+   }
+   
+   .security-section ul li {
+       background-color: #1a1a1a;
+       padding: 12px 20px;
+       margin-bottom: 10px;
+       border-left: 4px solid var(--accent-color);
+       border-radius: 4px;
+       color: var(--light-text-color);
+       font-size: 0.95em;
+       position: relative;
+       display: flex;
+       align-items: center;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+   
+   .security-section ul li i {
+       margin-right: 15px;
+       color: var(--accent-color); /* Ikon tetap warna aksen */
+       font-size: 1.2em;
+   }
+   
+   /* Gaya khusus untuk bagian peringatan/alert (misal: Pelaporan Insiden) */
+   .security-section.alert {
+       background-color: #2a2a00; /* Latar belakang kuning gelap/amber untuk peringatan */
+       border-color: #ffcc00; /* Border kuning/amber terang */
+       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 204, 0, 0.6); /* Glow kuning */
+   }
+   
+   .security-section.alert h3 {
+       color: #ffcc00; /* Judul peringatan kuning */
+       border-bottom-color: #ffcc00;
+   }
+   
+   .security-section.alert p {
+       color: #ffffdd; /* Teks peringatan lebih terang */
+   }
+   
+   .security-section.alert ul li {
+       background-color: #3d3d00; /* Latar belakang item list peringatan */
+       border-left-color: #ffcc00;
+   }
+   
+   .security-section.alert ul li i {
+       color: #ffcc00;
+   }
+   
+   .security-section .final-alert {
+       font-weight: bold;
+       color: #ffcc00; /* Teks akhir peringatan kuning */
+       text-align: center;
+       margin-top: 30px;
+       font-size: 1.1em;
+   }
+   
+   
+   /* Responsive Design */
+   @media (max-width: 1024px) {
+       .security-content {
+           padding: 60px 30px;
+       }
+       .security-hero .hero-content h1 {
+           font-size: 3.5em;
+       }
+       .security-content .section-title {
+           font-size: 2.5em;
+       }
+       .security-section h3 {
+           font-size: 1.6em;
+       }
+   }
+   
+   @media (max-width: 768px) {
+       .security-hero {
+           height: auto;
+           padding: 80px 20px 50px;
+       }
+       .security-hero .hero-content h1 {
+           font-size: 2.8em;
+       }
+       .security-hero .hero-content p {
+           font-size: 1.1em;
+       }
+       .security-content {
+           padding: 30px 20px;
+       }
+       .security-content .section-title {
+           font-size: 2em;
+           letter-spacing: 1px;
+       }
+       .security-section {
+           padding: 20px;
+       }
+       .security-section h3 {
+           font-size: 1.4em;
+       }
+       .security-section p {
+           font-size: 0.95em;
+       }
+       .security-section ul li {
+           padding: 10px 15px;
+           font-size: 0.9em;
+       }
+   }
+   
+   @media (max-width: 480px) {
+       .security-hero .hero-content h1 {
+           font-size: 2.2em;
+       }
+       .security-hero .hero-content p {
+           font-size: 0.9em;
+       }
+       .security-content .section-title {
+           font-size: 1.8em;
+       }
+       .security-section {
+           margin-bottom: 30px;
+       }
+   }

@@ -5,8 +5,8 @@
     --text-color: #bbbbbb;
     --light-text-color: #888888;
     --accent-color: #a30000; /* Dark mysterious red */
+    --hover-color: #d10000; /* Lighter red for hover */
     --border-color: #333333;
-    --hover-color: #d10000;
 }
 
 /* Reset & Base */
@@ -84,7 +84,7 @@ a:hover {
     width: 100%;
 }
 
-/* Hero Section */
+/* Hero Section (for index.html) */
 .hero {
     position: relative;
     height: 90vh;
@@ -96,7 +96,7 @@ a:hover {
     background-position: center;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080/0d0d0d/444444?text=D.A.R.C.+Intrusive+Anomaly');
     color: white;
-    padding-top: 80px;
+    padding-top: 80px; /* Account for fixed navbar */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -147,7 +147,7 @@ a:hover {
     box-shadow: 0 0 15px rgba(209, 0, 0, 0.6);
 }
 
-/* Content Sections & Search */
+/* Content Sections & Search (for index.html) */
 .content-container {
     padding: 40px 50px;
 }
@@ -261,7 +261,7 @@ a:hover {
     padding: 30px;
     font-size: 1.2em;
     color: var(--light-text-color);
-    display: none;
+    display: none; /* Controlled by JS */
 }
 
 .loading-indicator i {
@@ -276,7 +276,7 @@ a:hover {
 
 /* Modal Pop-up */
 .modal {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -297,7 +297,7 @@ a:hover {
 
 .modal-content {
     background-color: var(--main-bg);
-    margin: 5% auto;
+    margin: 5% auto; /* Adjusted for better vertical centering on larger screens */
     padding: 30px;
     border: 1px solid var(--border-color);
     width: 80%;
@@ -402,13 +402,14 @@ a:hover {
     color: var(--accent-color);
 }
 
-/* Responsive */
+/* Responsive (for index.html and global elements) */
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
     }
+    /* Hide nav for small screens if not using a hamburger menu */
     .navbar nav {
-        display: none;
+        display: none; 
     }
     .hero h1 {
         font-size: 2.8em;

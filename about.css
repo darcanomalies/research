@@ -1,0 +1,459 @@
+/* about.css */
+
+/* HAPUS: @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+/* Font Roboto sekarang hanya akan digunakan di elemen tertentu yang kita inginkan,
+   bukan secara global di body dari about.css */
+
+/* Base style */
+/* HAPUS ATAU UBAH:
+body {
+    font-family: 'Roboto', sans-serif;
+}
+JANGAN TENTUKAN FONT DI SINI, BIARKAN style.css YANG MENGATUR FONT BODY */
+
+
+/* Gaya Hero Khusus Halaman About */
+.about-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://via.placeholder.com/1920x600/222222/EEEEEE?text=D.A.R.C.+Secure+Facility');
+    height: 65vh;
+    border-bottom: 3px solid var(--accent-color);
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek garis-garis teknis di hero */
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(to right, rgba(163, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 50px 50px,
+        linear-gradient(to bottom, rgba(163, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 50px 50px;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.about-hero .hero-content {
+    z-index: 1;
+    padding: 20px;
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.about-hero .hero-content h1 {
+    /* UBAH FONT DI SINI AGAR SAMA DENGAN INDEX.HTML HERO H1 */
+    /* Akan kembali ke font default dari style.css (Segoe UI dll.) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Pastikan ini sesuai dengan font default Anda di style.css */
+    font-size: 4.5em; /* Ukuran yang sama dengan index.html hero h1 */
+    margin-bottom: 20px; /* Jarak yang sama dengan index.html hero h1 */
+    color: white;
+    text-shadow: 0 0 10px rgba(163, 0, 0, 0.7); /* Efek yang sama dengan index.html hero h1 */
+    letter-spacing: 2px; /* Efek yang sama dengan index.html hero h1 */
+    animation: none; /* Hapus animasi glow jika terlalu mencolok, atau sesuaikan */
+    font-weight: bold; /* Default weight */
+}
+
+/* Hapus `@keyframes textGlow` jika Anda tidak ingin animasi tersebut.
+   Jika Anda ingin efek glow tetap ada tapi tidak di judul utama,
+   Anda bisa menerapkannya ke elemen lain.
+   Untuk saat ini, saya akan HAPUS ANIMASINYA agar tidak mencolok pada judul utama. */
+/* @keyframes textGlow { ... } */
+
+
+.about-hero .hero-content p {
+    font-size: 1.4em; /* Ukuran yang sama dengan index.html hero p */
+    color: var(--light-text-color);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Efek yang sama dengan index.html hero p */
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Gaya Konten Utama Halaman About */
+.about-section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Font Roboto akan mulai berlaku di sini dan ke bawah */
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-intro .section-title {
+    border-left: none;
+    padding-left: 0;
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke judul konten */
+}
+
+.section-intro .section-title::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.section-intro .intro-text {
+    color: var(--light-text-color);
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke teks intro */
+}
+
+/* Our Mission - Ditata dalam Kotak */
+.mission-section {
+    margin-bottom: 70px;
+}
+
+.mission-section .section-title {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke judul misi */
+}
+.mission-section .section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.mission-details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.mission-box {
+    background-color: var(--main-bg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(163, 0, 0, 0.6);
+}
+
+.mission-box h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke judul kotak misi */
+}
+
+.mission-box p {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke paragraf kotak misi */
+}
+.mission-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Our Values */
+.our-values {
+    margin-bottom: 70px;
+}
+
+.our-values .section-title {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke judul nilai */
+}
+.our-values .section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.our-values .values-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.our-values .values-list li {
+    background-color: var(--main-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke list item nilai */
+}
+
+.our-values .values-list li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(163, 0, 0, 0.6);
+    border-color: var(--accent-color);
+}
+
+.our-values .values-list li i {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.our-values .values-list li:hover i {
+    color: var(--hover-color);
+}
+
+.our-values .values-list li span {
+    font-weight: 700;
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Our Divisions */
+.our-divisions {
+    margin-bottom: 70px;
+}
+
+.our-divisions .section-title {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke judul divisi */
+}
+.our-divisions .section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.our-divisions .divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.our-divisions .division-card {
+    background-color: var(--main-bg);
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-divisions .division-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(163, 0, 0, 0.3) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.our-divisions .division-card:hover::before {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.our-divisions .division-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(209, 0, 0, 0.8);
+    background-color: #1a1a1a;
+}
+
+.our-divisions .division-card h3 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke judul kartu divisi */
+}
+
+.our-divisions .division-card h3 i {
+    margin-right: 12px;
+    color: var(--accent-color);
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.our-divisions .division-card:hover h3 i {
+    color: var(--hover-color);
+}
+
+.our-divisions .division-card p {
+    color: var(--light-text-color);
+    font-size: 1em;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif; /* Terapkan Roboto ke paragraf kartu divisi */
+}
+
+/* Responsive untuk About Us */
+@media (max-width: 1024px) {
+    .about-section {
+        padding: 60px 30px;
+    }
+    /* Kembali ke ukuran hero h1 index.html pada breakpoint ini juga */
+    .about-hero .hero-content h1 {
+        font-size: 3.5em; /* Mirip dengan index.html hero h1 pada mobile */
+    }
+    .section-intro .section-title,
+    .our-values .section-title,
+    .our-divisions .section-title,
+    .mission-section .section-title {
+        font-size: 2.5em;
+    }
+    .mission-details-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        height: auto;
+        padding: 80px 20px 50px;
+        text-align: center;
+    }
+    /* Kembali ke ukuran hero h1 index.html pada breakpoint ini juga */
+    .about-hero .hero-content h1 {
+        font-size: 2.8em; /* Sama dengan index.html hero h1 pada mobile */
+    }
+    .about-hero .hero-content p {
+        font-size: 1.1em; /* Sama dengan index.html hero p pada mobile */
+    }
+    .about-section {
+        padding: 30px 20px;
+    }
+    .section-intro {
+        margin-bottom: 40px;
+    }
+    .section-intro .section-title,
+    .our-values .section-title,
+    .our-divisions .section-title,
+    .mission-section .section-title {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+    .our-values .values-list {
+        grid-template-columns: 1fr;
+    }
+    .our-divisions .divisions-grid {
+        grid-template-columns: 1fr;
+    }
+    .our-divisions .division-card h3 {
+        font-size: 1.3em;
+    }
+    .mission-details-container {
+        grid-template-columns: 1fr;
+    }
+    .mission-box {
+        padding: 20px;
+    }
+    .mission-box h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Kembali ke ukuran hero h1 index.html pada breakpoint ini juga */
+    .about-hero .hero-content h1 {
+        font-size: 2.5em; /* Mirip dengan index.html hero h1 pada mobile terkecil */
+    }
+    .about-hero .hero-content p {
+        font-size: 0.9em;
+    }
+    .section-intro .section-title,
+    .our-values .section-title,
+    .our-divisions .section-title,
+    .mission-section .section-title {
+        font-size: 1.8em;
+    }
+}
