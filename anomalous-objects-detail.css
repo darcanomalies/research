@@ -1,0 +1,47 @@
+/* Styling untuk Anomaly Security Level (Kolom Baru) */
+.anomaly-security-level {
+    background-color: #202010; /* Latar belakang kuning gelap / olive untuk peringatan */
+    border-color: #ccaa00; /* Border kuning/emas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(204, 170, 0, 0.5); /* Glow kuning */
+}
+
+.anomaly-security-level h3 {
+    color: #ffdd00; /* Judul kuning terang */
+    border-bottom-color: #ffdd00;
+}
+
+.anomaly-security-level ul li {
+    background-color: #2d2d05; /* Latar belakang item list yang lebih gelap dari blok */
+    border-left-color: #ffdd00; /* Border kuning terang */
+}
+
+/* Warna ikon berdasarkan tingkat keamanan (opsional, bisa disesuaikan) */
+.security-icon-green {
+    color: #4CAF50; /* Hijau */
+}
+
+.security-icon-yellow {
+    color: #FFEB3B; /* Kuning */
+}
+
+.security-icon-red {
+    color: #F44336; /* Merah */
+}
+
+.security-note {
+    font-weight: bold;
+    color: #ffdd00; /* Teks catatan kuning */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+/* Responsive adjustment for anomaly-security-level if needed */
+@media (max-width: 768px) {
+    .anomaly-security-level p, .anomaly-security-level ul li {
+        font-size: 0.9em;
+    }
+    .anomaly-security-level .security-note {
+        font-size: 0.95em;
+    }
+}
